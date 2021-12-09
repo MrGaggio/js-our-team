@@ -44,13 +44,32 @@ const team = [
 
 //SELEZIONI
 
-const containerElement = document.querySelector('div.team-container')
-let cardElement = document.querySelector('div.card-image')
+const containerElement = document.querySelector('div.team-card')
+const cardElement = document.querySelector('div.card-image')
 
 const nameElement = document.querySelector('div.name')
 const roleElement = document.querySelector('div.role')
 const imgElement = document.querySelector('div.card-image img')
 console.log(imgElement);
 
+
+// ciclare all'interno dell'array
+
+for (let i = 0; i < team.length; i++) {
+  const obj = team[i];
+  console.log(obj);
+// selezionare la card per cambiare i valori
+const template = `
+<div class="card-image">
+  <img src="img/${obj.image}"/>
+</div>
+<div class="card-text">
+  <h3 class="name">${obj.name}</h3>
+  <p class="role">${obj.role}</p>
+</div>
+` 
+containerElement.innerHTML += template
+
+}
 
 

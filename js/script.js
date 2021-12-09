@@ -55,7 +55,7 @@ const button = document.getElementById('addMemberButton')
 
 for (let i = 0; i < team.length; i++) {
   const obj = team[i];
-  console.log(obj);
+  // console.log(obj);
 // selezionare la card per cambiare i valori
 const template = `
 <div class="card-image">
@@ -70,11 +70,54 @@ containerElement.innerHTML += template
 
 }
 
+const newArray = []
+
+//alla pressione del Add bisogna inserire i  nuovi dati
+
+button.addEventListener('click',function (containerElement) {
+  // alert('funziona')
+  // selezione degli elementi
+  const name = document.getElementById('name')
+  const role = document.getElementById('role')
+  const image = document.getElementById('image')
 
 
 
-//alla pressione del Add bisogna creare una nuova card con i dadi inseriti nella sezione sotto
+  //assegnazione del valore alle variabili
+  const newName = name.value
+  const newRole = role.value
+  const newImage = image.value
 
-button.addEventListener('click', function () {
+  // creare l'oggetto da pushare
+  const object = {
+    name: newName,
+    role: newRole,
+    image: newImage,
+  }
+
+  newArray.push(object)
+
+  for (let i = 0; i < newArray.length; i++) {
+    const obj = newArray[i];
+    // console.log(obj);
+  // selezionare la card per cambiare i valori
+  const template2 = `
+  <div class="card-image">
+    <img src="img/${obj.image}"/>
+  </div>
+  <div class="card-text">
+    <h3 class="name">${obj.name}</h3>
+    <p class="role">${obj.role}</p>
+  </div>
+  ` 
+  containerElement.innerHTML += template2
   
+  }
+
+
+
+
+
 })
+
+console.log(newArray);

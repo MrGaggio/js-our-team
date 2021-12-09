@@ -45,12 +45,10 @@ const team = [
 //SELEZIONI
 
 const containerElement = document.querySelector('div.team-card')
-const cardElement = document.querySelector('div.card-image')
+const button = document.getElementById('addMemberButton')
 
-const nameElement = document.querySelector('div.name')
-const roleElement = document.querySelector('div.role')
-const imgElement = document.querySelector('div.card-image img')
-console.log(imgElement);
+
+
 
 
 // ciclare all'interno dell'array
@@ -73,3 +71,10 @@ containerElement.innerHTML += template
 }
 
 
+
+
+//alla pressione del Add bisogna creare una nuova card con i dadi inseriti nella sezione sotto
+
+button.addEventListener('click', function () {
+  
+})

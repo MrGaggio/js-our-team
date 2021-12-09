@@ -40,3 +40,17 @@ const team = [
     image: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+
+//SELEZIONI
+
+const containerElement = document.querySelector('div.team-container')
+let cardElement = document.querySelector('div.card-image')
+
+const nameElement = document.querySelector('div.name')
+const roleElement = document.querySelector('div.role')
+const imgElement = document.querySelector('div.card-image img')
+console.log(imgElement);
+
+
+
